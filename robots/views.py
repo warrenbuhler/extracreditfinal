@@ -12,7 +12,8 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse('bow before the robot army')
+    context= {'ha':'bow before the robot army'}
+    return render(request, 'robots.html', context)
 
 def new(request):
     return HttpResponse('wher new')
